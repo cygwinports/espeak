@@ -1,0 +1,26 @@
+DESCRIPTION="eSpeak text-to-speech engine"
+HOMEPAGE="http://espeak.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}-source.zip"
+SRC_DIR="${P}-source"
+
+PKG_NAMES="${PN} lib${PN}${PVP[0]} lib${PN}-devel"
+PKG_HINTS="bin lib devel"
+PKG_CONTENTS[0]="usr/bin/*.exe usr/share/doc/"
+PKG_CONTENTS[1]="usr/bin/cyg${PN}-${PVP[0]}.dll usr/share/${PN}-data/"
+PKG_CONTENTS[2]="usr/include/ usr/lib/"
+
+src_compile() {
+	lndirs
+	cd ${B}/src
+	rm -f portaudio.h
+	cp portaudio{19,}.h
+	cygmake \
+		CXXFLAGS="${CXXFLAGS} -DNEED_WCHAR_FUNCTIONS" \
+		LIB_NAME=cygespeak-${PVP[0]}.dll \
+		SONAME_OPT="-Wl,--enable-auto-image-base -Wl,--out-implib,libespeak.dll.a"
+}
+
+src_install() {
+	cd ${B}/src
+	cyginstall LIB_NAME=cygespeak-${PVP[0]}.dll
+}
