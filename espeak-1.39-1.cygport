@@ -7,9 +7,9 @@ SRC_DIR="${P}-source"
 
 PKG_NAMES="${PN} lib${PN}${PVP[0]} lib${PN}-devel"
 PKG_HINTS="bin lib devel"
-PKG_CONTENTS[0]="usr/bin/*.exe usr/share/doc/"
-PKG_CONTENTS[1]="usr/bin/cyg${PN}-${PVP[0]}.dll usr/share/${PN}-data/"
-PKG_CONTENTS[2]="usr/include/ usr/lib/"
+espeak_CONTENTS="usr/bin/*.exe usr/share/doc/"
+libespeak1_CONTENTS="usr/bin/cygespeak-1.dll usr/share/${PN}-data/"
+libespeak_devel_CONTENTS="usr/include/ usr/lib/"
 
 src_compile() {
 	lndirs

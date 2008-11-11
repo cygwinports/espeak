@@ -11,8 +11,8 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  binutils-20080524-2
-  cygport-0.3.13-1
+  binutils-20080624-2
+  cygport-0.4.2-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   make-3.81-1
@@ -26,17 +26,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack espeak-1.38-X-src.tar.bz2
+  unpack espeak-1.39-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./espeak-1.38-X.cygport all
+  cygport ./espeak-1.39-X.cygport all
 
 This will create:
-  /usr/src/espeak-1.38-X-src.tar.bz2
-  /usr/src/espeak-1.38-X.tar.bz2
-  /usr/src/libespeak-devel-1.38-X.tar.bz2
-  /usr/src/libespeak1-1.38-X.tar.bz2
+  /usr/src/espeak-1.39-X-src.tar.bz2
+  /usr/src/espeak-1.39-X.tar.bz2
+  /usr/src/libespeak-devel-1.39-X.tar.bz2
+  /usr/src/libespeak1-1.39-X.tar.bz2
 
 -------------------------------------------
 
@@ -44,9 +44,9 @@ Files included in the binary packages:
 
 (espeak)
   /usr/bin/espeak.exe
-  /usr/share/doc/espeak-1.38/ChangeLog
-  /usr/share/doc/espeak-1.38/LICENSE.txt
-  /usr/share/doc/espeak-1.38/README
+  /usr/share/doc/espeak-1.39/ChangeLog
+  /usr/share/doc/espeak-1.39/LICENSE.txt
+  /usr/share/doc/espeak-1.39/README
 
 (libespeak1)
   /usr/bin/cygespeak-1.dll
@@ -220,6 +220,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.39-1 -----
+Version bump.
 
 ----- version 1.38-1 -----
 Version bump.
