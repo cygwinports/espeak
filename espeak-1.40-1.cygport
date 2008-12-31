@@ -1,12 +1,12 @@
 DESCRIPTION="eSpeak text-to-speech engine"
 HOMEPAGE="http://espeak.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-source.zip"
-PATCH_URI="1.37-cygwin.patch"
+PATCH_URI="1.37-cygwin.patch
+           1.37-cdecl.patch"
 
 SRC_DIR="${P}-source"
 
 PKG_NAMES="${PN} lib${PN}${PVP[0]} lib${PN}-devel"
-PKG_HINTS="bin lib devel"
 espeak_CONTENTS="usr/bin/*.exe usr/share/doc/"
 libespeak1_CONTENTS="usr/bin/cygespeak-1.dll usr/share/${PN}-data/"
 libespeak_devel_CONTENTS="usr/include/ usr/lib/"

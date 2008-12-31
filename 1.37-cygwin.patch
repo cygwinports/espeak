@@ -24,7 +24,12 @@
  
  .cpp.o:
  	$(CXX) $(CXXFLAGS) $(USE_AUDIO) -D PATH_ESPEAK_DATA=\"$(DATADIR)\" -Wall -pedantic -I. -c -fno-exceptions  $<
-@@ -92,7 +95,7 @@
+@@ -88,11 +91,11 @@
+ 
+ 
+ x_%.o: %.cpp
+-	$(CXX) $(CXXFLAGS) $(USE_AUDIO) -Wall -fpic -fvisibility=hidden -pedantic \
++	$(CXX) $(CXXFLAGS) $(USE_AUDIO) -Wall -pedantic \
  	-I. -D LIBRARY -c -fno-exceptions  $<  -o x_$*.o
  
  $(LIB_NAME): $(OBJS2)
