@@ -6,16 +6,17 @@ English speech. It uses a different synthesis method from other open
 source TTS engines, and sounds quite different.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libportaudio2-19.20071207-1
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libportaudio2-19.20071207-10
 
 Build requirements:
 (besides corresponding -devel packages)
   binutils-20080624-2
-  cygport-0.4.2-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  make-3.81-1
+  cygport-0.9.6-1
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  make-3.81-2
 
 Canonical website:
   http://espeak.sourceforge.net/
@@ -26,17 +27,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack espeak-1.40-X-src.tar.bz2
+  unpack espeak-1.40.02-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./espeak-1.40-X.cygport all
+  cygport ./espeak-1.40.02-X.cygport all
 
 This will create:
-  /usr/src/espeak-1.40-X-src.tar.bz2
-  /usr/src/espeak-1.40-X.tar.bz2
-  /usr/src/libespeak-devel-1.40-X.tar.bz2
-  /usr/src/libespeak1-1.40-X.tar.bz2
+  /usr/src/espeak-1.40.02-X-src.tar.bz2
+  /usr/src/espeak-1.40.02-X.tar.bz2
+  /usr/src/libespeak-devel-1.40.02-X.tar.bz2
+  /usr/src/libespeak1-1.40.02-X.tar.bz2
 
 -------------------------------------------
 
@@ -44,13 +45,14 @@ Files included in the binary packages:
 
 (espeak)
   /usr/bin/espeak.exe
-  /usr/share/doc/espeak-1.40/ChangeLog
-  /usr/share/doc/espeak-1.40/LICENSE.txt
-  /usr/share/doc/espeak-1.40/README
+  /usr/share/doc/espeak/ChangeLog
+  /usr/share/doc/espeak/License.txt
+  /usr/share/doc/espeak/ReadMe
 
 (libespeak1)
   /usr/bin/cygespeak-1.dll
   /usr/share/espeak-data/af_dict
+  /usr/share/espeak-data/ca_dict
   /usr/share/espeak-data/config
   /usr/share/espeak-data/cs_dict
   /usr/share/espeak-data/cy_dict
@@ -65,20 +67,22 @@ Files included in the binary packages:
   /usr/share/espeak-data/hbs_dict
   /usr/share/espeak-data/hi_dict
   /usr/share/espeak-data/hu_dict
+  /usr/share/espeak-data/hy_dict
   /usr/share/espeak-data/id_dict
   /usr/share/espeak-data/is_dict
   /usr/share/espeak-data/it_dict
   /usr/share/espeak-data/jbo_dict
   /usr/share/espeak-data/ku_dict
   /usr/share/espeak-data/la_dict
+  /usr/share/espeak-data/lv_dict
   /usr/share/espeak-data/mbrola_ph/af1_phtrans
   /usr/share/espeak-data/mbrola_ph/ca1_phtrans
   /usr/share/espeak-data/mbrola_ph/cr1_phtrans
   /usr/share/espeak-data/mbrola_ph/cs_phtrans
+  /usr/share/espeak-data/mbrola_ph/de2_phtrans
   /usr/share/espeak-data/mbrola_ph/de4_phtrans
   /usr/share/espeak-data/mbrola_ph/de6_phtrans
   /usr/share/espeak-data/mbrola_ph/en1_phtrans
-  /usr/share/espeak-data/mbrola_ph/es4_phtrans
   /usr/share/espeak-data/mbrola_ph/es_phtrans
   /usr/share/espeak-data/mbrola_ph/fr1_phtrans
   /usr/share/espeak-data/mbrola_ph/gr2_phtrans
@@ -90,6 +94,10 @@ Files included in the binary packages:
   /usr/share/espeak-data/mbrola_ph/la1_phtrans
   /usr/share/espeak-data/mbrola_ph/nl_phtrans
   /usr/share/espeak-data/mbrola_ph/pl1_phtrans
+  /usr/share/espeak-data/mbrola_ph/pt1_phtrans
+  /usr/share/espeak-data/mbrola_ph/pt_phtrans
+  /usr/share/espeak-data/mbrola_ph/ptbr4_phtrans
+  /usr/share/espeak-data/mbrola_ph/ptbr_phtrans
   /usr/share/espeak-data/mbrola_ph/ro1_phtrans
   /usr/share/espeak-data/mbrola_ph/sv2_phtrans
   /usr/share/espeak-data/mbrola_ph/sv_phtrans
@@ -106,6 +114,7 @@ Files included in the binary packages:
   /usr/share/espeak-data/ro_dict
   /usr/share/espeak-data/ru_dict
   /usr/share/espeak-data/sk_dict
+  /usr/share/espeak-data/sq_dict
   /usr/share/espeak-data/sv_dict
   /usr/share/espeak-data/sw_dict
   /usr/share/espeak-data/ta_dict
@@ -116,6 +125,7 @@ Files included in the binary packages:
   /usr/share/espeak-data/voices/!v/f2
   /usr/share/espeak-data/voices/!v/f3
   /usr/share/espeak-data/voices/!v/f4
+  /usr/share/espeak-data/voices/!v/fast
   /usr/share/espeak-data/voices/!v/m1
   /usr/share/espeak-data/voices/!v/m2
   /usr/share/espeak-data/voices/!v/m3
@@ -123,9 +133,9 @@ Files included in the binary packages:
   /usr/share/espeak-data/voices/!v/m5
   /usr/share/espeak-data/voices/!v/m6
   /usr/share/espeak-data/voices/!v/whisper
-  /usr/share/espeak-data/voices/!v/wisper
   /usr/share/espeak-data/voices/af
   /usr/share/espeak-data/voices/bs
+  /usr/share/espeak-data/voices/ca
   /usr/share/espeak-data/voices/cs
   /usr/share/espeak-data/voices/cy
   /usr/share/espeak-data/voices/de
@@ -133,9 +143,9 @@ Files included in the binary packages:
   /usr/share/espeak-data/voices/el
   /usr/share/espeak-data/voices/en/en
   /usr/share/espeak-data/voices/en/en-n
-  /usr/share/espeak-data/voices/en/en-r
   /usr/share/espeak-data/voices/en/en-rp
   /usr/share/espeak-data/voices/en/en-sc
+  /usr/share/espeak-data/voices/en/en-us
   /usr/share/espeak-data/voices/en/en-wi
   /usr/share/espeak-data/voices/en/en-wm
   /usr/share/espeak-data/voices/eo
@@ -143,20 +153,26 @@ Files included in the binary packages:
   /usr/share/espeak-data/voices/es-la
   /usr/share/espeak-data/voices/fi
   /usr/share/espeak-data/voices/fr
-  /usr/share/espeak-data/voices/grc
+  /usr/share/espeak-data/voices/fr-be
   /usr/share/espeak-data/voices/hi
   /usr/share/espeak-data/voices/hr
   /usr/share/espeak-data/voices/hu
+  /usr/share/espeak-data/voices/hy
+  /usr/share/espeak-data/voices/hy-west
   /usr/share/espeak-data/voices/id
   /usr/share/espeak-data/voices/is
   /usr/share/espeak-data/voices/it
-  /usr/share/espeak-data/voices/jbo
   /usr/share/espeak-data/voices/ku
   /usr/share/espeak-data/voices/la
+  /usr/share/espeak-data/voices/lv
   /usr/share/espeak-data/voices/mb/mb-af1
   /usr/share/espeak-data/voices/mb/mb-af1-en
+  /usr/share/espeak-data/voices/mb/mb-br1
+  /usr/share/espeak-data/voices/mb/mb-br3
+  /usr/share/espeak-data/voices/mb/mb-br4
   /usr/share/espeak-data/voices/mb/mb-cr1
   /usr/share/espeak-data/voices/mb/mb-cz2
+  /usr/share/espeak-data/voices/mb/mb-de2
   /usr/share/espeak-data/voices/mb/mb-de4
   /usr/share/espeak-data/voices/mb/mb-de4-en
   /usr/share/espeak-data/voices/mb/mb-de5
@@ -183,6 +199,7 @@ Files included in the binary packages:
   /usr/share/espeak-data/voices/mb/mb-nl2-en
   /usr/share/espeak-data/voices/mb/mb-pl1
   /usr/share/espeak-data/voices/mb/mb-pl1-en
+  /usr/share/espeak-data/voices/mb/mb-pt1
   /usr/share/espeak-data/voices/mb/mb-ro1
   /usr/share/espeak-data/voices/mb/mb-ro1-en
   /usr/share/espeak-data/voices/mb/mb-sw1
@@ -201,14 +218,17 @@ Files included in the binary packages:
   /usr/share/espeak-data/voices/ro
   /usr/share/espeak-data/voices/ru
   /usr/share/espeak-data/voices/sk
+  /usr/share/espeak-data/voices/sq
   /usr/share/espeak-data/voices/sr
   /usr/share/espeak-data/voices/sv
   /usr/share/espeak-data/voices/sw
   /usr/share/espeak-data/voices/ta
+  /usr/share/espeak-data/voices/test/grc
+  /usr/share/espeak-data/voices/test/jbo
   /usr/share/espeak-data/voices/tr
   /usr/share/espeak-data/voices/vi
   /usr/share/espeak-data/voices/zh
-  /usr/share/espeak-data/voices/zhy
+  /usr/share/espeak-data/voices/zh-yue
   /usr/share/espeak-data/zh_dict
   /usr/share/espeak-data/zhy_dict
 
@@ -221,17 +241,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.40-1 -----
-Version bump.
-
------ version 1.39-1 -----
-Version bump.
-
------ version 1.38-1 -----
-Version bump.
-
------ version 1.37-1 -----
-Initial release for Cygwin.
+----- version 1.40.02-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

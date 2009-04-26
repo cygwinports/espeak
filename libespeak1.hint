@@ -1,5 +1,5 @@
 category: Audio Text
-requires: cygwin libportaudio2
+requires: cygwin libgcc1 libportaudio2
 external-source: espeak
 sdesc: "eSpeak text-to-speech engine (runtime library)"
 ldesc: "eSpeak is a compact open source software speech synthesizer for 

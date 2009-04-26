@@ -11,18 +11,21 @@ espeak_CONTENTS="usr/bin/*.exe usr/share/doc/"
 libespeak1_CONTENTS="usr/bin/cygespeak-1.dll usr/share/${PN}-data/"
 libespeak_devel_CONTENTS="usr/include/ usr/lib/"
 
+MAKEOPTS+=" BIN_NAME=speak.exe BIN2_NAME=espeak.exe LIB_NAME=cygespeak-1.dll"
+
 src_compile() {
 	lndirs
 	cd ${B}/src
 	rm -f portaudio.h
 	cp portaudio{19,}.h
 	cygmake \
-		CXXFLAGS="${CXXFLAGS} -DNEED_WCHAR_FUNCTIONS" \
-		LIB_NAME=cygespeak-${PVP[0]}.dll \
+		CXX="${CXX}" \
+		CXXFLAGS="${CXXFLAGS}" \
 		SONAME_OPT="-Wl,--enable-auto-image-base -Wl,--out-implib,libespeak.dll.a"
 }
 
 src_install() {
 	cd ${B}/src
-	cyginstall LIB_NAME=cygespeak-${PVP[0]}.dll
+	cyginstall
 }
+DOCS="License.txt ReadMe"
