@@ -1,5 +1,5 @@
 category: Audio Text
-requires: libgcc1 libportaudio2
+requires: libportaudio2 libpulse0 libpulse-simple0
 external-source: espeak
 sdesc: "eSpeak text-to-speech engine (runtime library)"
 ldesc: "eSpeak is a compact open source software speech synthesizer for 
