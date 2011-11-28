@@ -23,8 +23,11 @@ src_compile() {
 src_install() {
 	cd ${B}/src
 	dobin espeak.exe cygespeak-1.dll
-	doinclude speak_lib.h
 	dolib libespeak.*
+
+	includeinto espeak
+	doinclude speak_lib.h
+
 	dodir /usr/share
 	cp -r ${S}/espeak-data ${D}/usr/share/
 }
